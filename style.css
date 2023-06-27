@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Quicksand:wght@300;400&family=Rubik:wght@300;400&family=Shippori+Antique+B1&family=Signika+Negative:wght@300;400&family=Stylish&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Cabin+Condensed&family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Jost:wght@300;400&family=Red+Hat+Display:wght@300;400&display=swap');
 
 
 body {
@@ -7,12 +13,19 @@ body {
   height: 100vh;
   margin: 0;
 
-  background: #1B1B1B;
-  color: #EDECEC;
+  background: #dec4dc;
+  color: #414141;
 
   text-align: center;
-  font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
+
+  font-style: italic;
+  font-weight: 300;
+  font-size: max(3vw,30px);
+
+  letter-spacing: -0.08em;
+  text-align: left;
 }
 
 div {
@@ -20,23 +33,25 @@ div {
 }
 
 h1, h2 {
-  font-size: max(140px, 8vw);
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 1;
   margin: 0;
-  line-height: 1; 
+  font-style: normal;
 }
 
 h1 {
-  font-style: italic;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.04em;
+  font-size: 3em;
+  margin: 0.2em 0 0.5em 0;
 }
 
 h1 span {
   letter-spacing: -0.1em;
+  font-style: italic;
 }
 
-h2 {
-  letter-spacing: 0.02em;
+.date {
+  font-size: 1.6em;
 }
 
 img, footer {
@@ -44,18 +59,16 @@ img, footer {
 }
 
 .flowers-1 {
-  width: max(25vw, 20vh);
+  width: max(25vw, 19vh);
   top: 1em; left: 0.5em;
 }
 
 .flowers-2 {
-  width: max(35vw, 40vh);
+  width: max(35vw, 38vh);
   bottom: 1em; right: 1em;
 }
 
 
 p {
-  font-size: max(50px, 3vw);
   margin: 0;
-  margin-top: 2em;
 }
