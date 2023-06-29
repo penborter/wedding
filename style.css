@@ -1,37 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Quicksand:wght@300;400&family=Rubik:wght@300;400&family=Shippori+Antique+B1&family=Signika+Negative:wght@300;400&family=Stylish&family=Varela+Round&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Cabin+Condensed&family=Lato:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Jost:wght@300;400&family=Red+Hat+Display:wght@300;400&display=swap');
-
 
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   margin: 0;
 
-  background: #dec4dc;
+  background: #fde6d9; /* #dec4dc */
   color: #414141;
 
   text-align: center;
   font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
 
-  font-style: italic;
   font-weight: 300;
   font-size: 40px;
-  font-size: 3vmax;
+  font-size: 2.5vmax;
 
-  letter-spacing: -0.08em;
+  letter-spacing: -0.025em;
   text-align: left;
+}
+
+.sans {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: italic;
 }
 
 div {
   margin: auto;
-  padding: 1em;
+  padding: 2em;
 }
 
 h1, h2 {
@@ -39,12 +38,13 @@ h1, h2 {
   line-height: 1;
   margin: 0;
   font-style: normal;
+  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
 }
 
 h1 {
   letter-spacing: -0.06em;
-  font-size: 3em;
-  margin: 0.2em 0 0.5em 0;
+  font-size: 3.5em;
+  margin: 0.5em 0;
 }
 
 h1 span {
@@ -53,7 +53,7 @@ h1 span {
 }
 
 .date {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 
 img, footer {
@@ -73,4 +73,29 @@ img, footer {
 
 p {
   margin: 0;
+  font-style: italic;
+}
+
+.normal {
+  font-style: normal;
+}
+
+p span {
+  letter-spacing: -0.02em;
+  padding-right: 0.1em; 
+}
+
+.footer {
+  height: fit-content;
+  margin: 0;
+  padding: 0 0 1em 0;
+}
+
+.footer p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.75em;
+
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
 }
