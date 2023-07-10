@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Quicksand:wght@300;400&family=Rubik:wght@300;400&family=Shippori+Antique+B1&family=Signika+Negative:wght@300;400&family=Stylish&family=Varela+Round&display=swap');
 
 body {
   display: flex;
@@ -9,71 +8,37 @@ body {
   margin: 0;
 
   background: #fde6d9; /* #dec4dc */
-  color: #414141;
+  color: rgba(0,0,0,0);
+  -webkit-text-stroke: 1px #414141;
 
-  text-align: center;
   font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
-
-  font-weight: 300;
   font-size: 40px;
-  font-size: 2.5vmax;
+  font-size: 5.8vmax;
 
   letter-spacing: -0.025em;
-  text-align: left;
-}
-
-.sans {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  font-style: italic;
 }
 
 div {
   margin: auto;
-  padding: 2em;
+  padding: 1em;
 }
-
-h1, h2 {
-  font-weight: 300;
-  line-height: 1;
-  margin: 0;
-  font-style: normal;
-  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
-}
-
-h1 {
-  letter-spacing: -0.06em;
-  font-size: 3.5em;
-  margin: 0.5em 0;
-}
-
-h1 span {
-  letter-spacing: -0.1em;
-  font-style: italic;
-}
-
-.date {
-  font-size: 1.8em;
-}
-
-img, footer {
-  position: absolute;
-}
-
-.flowers-1 {
-  width: max(25vw, 19vh);
-  top: 1em; left: 0.5em;
-}
-
-.flowers-2 {
-  width: max(35vw, 38vh);
-  bottom: 1em; right: 1em;
-}
-
 
 p {
   margin: 0;
   font-style: italic;
+}
+
+.fill {
+  color: #f28e54;
+  -webkit-text-stroke: 0;
+  font-style: normal;
+}
+
+.i {
+  font-style: italic;
+  color: rgba(0,0,0,0);
+  -webkit-text-stroke: 1px #555;
 }
 
 .normal {
@@ -83,19 +48,4 @@ p {
 p span {
   letter-spacing: -0.02em;
   padding-right: 0.1em; 
-}
-
-.footer {
-  height: fit-content;
-  margin: 0;
-  padding: 0 0 1em 0;
-}
-
-.footer p {
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 0.75em;
-
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
 }
