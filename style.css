@@ -7,9 +7,10 @@ body {
   height: 100vh;
   margin: 0;
 
-  background: #fde6d9; /* #dec4dc */
-  color: rgba(0,0,0,0);
-  -webkit-text-stroke: 1px #414141;
+  background: #fde4d8; /* #dec4dc */
+  color: #f28e54;
+  /* -webkit-text-stroke: 1px #414141; */
+  text-align: justify;
 
   font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
@@ -30,22 +31,16 @@ p {
 }
 
 .fill {
-  color: #f28e54;
+  color: #414141;
   -webkit-text-stroke: 0;
   font-style: normal;
 }
 
 .i {
   font-style: italic;
-  color: rgba(0,0,0,0);
-  -webkit-text-stroke: 1px #555;
 }
 
-.normal {
-  font-style: normal;
-}
-
-p span {
-  letter-spacing: -0.02em;
-  padding-right: 0.1em; 
+sup {
+  font-size: 0.6em;
+  padding-left: 0.1em;
 }
