@@ -77,4 +77,12 @@ a:hover path {
 
     line-height: 1.5;
   }
+
+  .show {
+    display: inline;
+  }
+
+  .hide {
+    display: none;
+  }
 }
