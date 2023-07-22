@@ -11,11 +11,12 @@ body {
   color: #ff9061;
   /* -webkit-text-stroke: 1px #414141; */
   text-align: justify;
+  text-align-last: justify;
 
   font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   font-size: 40px;
-  font-size: 5.8vmax;
+  font-size: 5.4vmax;
 
   letter-spacing: -0.045em;
   line-height: 1.3em;
