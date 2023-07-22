@@ -8,7 +8,7 @@ body {
   margin: 0;
 
   background: #fde4d8; /* #dec4dc */
-  color: #f28e54;
+  color: #ff9061;
   /* -webkit-text-stroke: 1px #414141; */
   text-align: justify;
 
@@ -17,7 +17,7 @@ body {
   font-size: 40px;
   font-size: 5.8vmax;
 
-  letter-spacing: -0.025em;
+  letter-spacing: -0.045em;
   line-height: 1.3em;
 }
 
@@ -32,8 +32,8 @@ p {
 }
 
 .fill {
-  color: #414141;
-  -webkit-text-stroke: 0;
+  color: #493d36;
+  /* -webkit-text-stroke: 0; */
   font-style: normal;
 }
 
@@ -44,4 +44,35 @@ p {
 sup {
   font-size: 0.6em;
   padding-left: 0.1em;
+
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+svg {
+  width: 0.6em;
+  height: 0.6em;
+}
+
+path {
+  fill: #ff9061d8;
+}
+
+a:hover path {
+    fill: #ff9061aa;
+}
+
+.show {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .show {
+    display: inline;
+  }
+
+  .hide {
+    display: none;
+  }
 }
