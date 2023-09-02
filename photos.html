@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Photos | C&B</title>
+    <meta name="description" content="Information!">
+  </head>
+
+  <body>
+
+    <nav>
+      <h1 class="orange"><a href="info.html">Claudia <i>&</i> Ben</a></h1>
+      <div id="nav">
+        <a class="button" href="photos.html">Photos</a>
+        <a class="button" href="faq.html">FAQ</a>
+        <a class="button" href="rsvp.html">RSVP</a>
+        <a id="heart" href="index.html">🧡</a>
+      </div>
+    </nav>
+
+    <div class="columns">
+      <div id="left"> 
+        <figure>
+          <img id="image" src="assets/pic1.jpg" alt="A picture of Claudia and Ben">
+        </figure>
+      </div>
+
+      <div id="right">
+        <p></p>
+        <h1>Photos</h1>
+        <p>Nothing to see here yet—once we've actually had the wedding, we'll share the photos here.</p>
+        <p>For now, enjoy this Claudia <i>&</i> Ben slideshow!</p>
+      </div>
+    </div>
+
+    <script>
+      let image = document.getElementById('image');
+      let images = ['assets/pic1.jpg', 'assets/pic2.jpg', 'assets/pic3.jpg', 'assets/pic4.jpg', 'assets/pic5.jpg'];
+      let num = 1;
+
+      console.log(num)
+
+      setInterval(function(){
+        let len = images.length;
+        image.src = images[num++];
+        if (num == len) {
+          num = 0;
+        }
+
+        console.log(num)
+      }, 5000);
+    </script>
+
+  </body>
+</html>
