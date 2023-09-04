@@ -36,6 +36,10 @@ body.savedate {
   line-height: 1.3em;
 }
 
+.savedate div {
+  margin: auto;
+}
+
 div {
   margin: 1em 0;
   padding: 1em;
