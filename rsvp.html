@@ -28,11 +28,51 @@
     <div class="columns">
       <div id="left"> 
         <h1>RSVP</h1>
-        <p>You'll have to do this at some point...</p>
+
+        <form
+          class="gform"
+          action="https://script.google.com/macros/s/AKfycby_p5SJChj98imM7T_kLZ44JLHgV9n_Z2dUDTnx8u9TU5GqBLm0X1YY7H9uKWM4RGn3/exec"
+          method="POST"
+        >
+          <div class="form-elements">
+            <p>Please fill out and submit the form below!</p>
+
+            <label>
+              Name(s): 
+            </label> <br>
+            <input type="text" name="name_1" size="40" placeholder="Your name (first and last names)"> <br>
+            <input type="text" name="name_2" size="40" placeholder="Partner or plus one, if relevant" class="mb-1"> <br>
+
+            <label>
+              Best contact email:
+            </label> <br>
+            <input type="email" name="email" size="40" placeholder="hello@example.com" class="mb-1"> <br>
+
+            <label>
+              One (1) dancefloor request:
+            </label> <br>
+            <input type="text" name="song" size="40" class="mb-1" placeholder="e.g. Parachute, by Timomatic"> <br>
+
+            <label>
+              Any dietary restrictions:
+            </label> <br>
+            <textarea name="message" placeholder="Any dietary restrictions, or other notes..." cols="39" class="mb-1"></textarea> <br>
+            <button type="submit" class="button">RSVP!</button>
+          </div>
+
+          <p style="display:none" class="thankyou_message">
+            All done, thank you for the response—we're looking forward to celebrating with you!
+          </p>
+          
+        </form>
+
       </div>
 
       <div id="right">
       </div>
     </div>
+
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+
   </body>
 </html>

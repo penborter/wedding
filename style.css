@@ -284,6 +284,54 @@ a.button:hover {
 }
 
 
+.form-elements {
+  padding: 0;
+}
+
+input, textarea {
+  padding: 0.5em 0.5em;
+  margin: 0.2em -0.5em;
+  border-radius: 5px;
+  border: 1px solid var(--orange);
+  color: var(--grey) !important;
+  
+  font-family: arial, sans-serif;
+  font-size: 16px;
+
+  max-width: 93vw;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.4em;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.submit {
+  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+button {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--orange);
+  color: #fff !important;
+  margin-top: 1em;
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 2px 2px rgba(0,0,0,0.03),
+              0 4px 4px rgba(0,0,0,0.03),
+              0 8px 8px rgba(0,0,0,0.03);
+}
+
+
 @media screen and (max-width: 750px) {
 
   .columns {
