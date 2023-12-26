@@ -283,6 +283,9 @@ a.button:hover {
   font-size: 1.2em;
 }
 
+form {
+  display: none;
+}
 
 .form-elements {
   padding: 0;
