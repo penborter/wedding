@@ -112,22 +112,37 @@ nav h1 {
 
 a#enter {
   color: var(--orange);
-  font-style: italic;
-
-  text-decoration-thickness: 0.05em;
-  text-underline-offset: 0.15em;
-  transition: 0.3s ease color;
+  border: 1px solid var(--orange);
+  text-decoration: none;
+  font-style: normal;
+  transition: 0.3s background ease;
+  width: fit-content;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  font-size: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.2;
 }
 
 a#enter:hover {
-  color: var(--grey);
+  color: #fff;
+}
+
+a#enter:hover .hover_hide, .hover_show {
+  display: none;
+}
+
+a#enter:hover .hover_show {
+  display: inline;
 }
 
 a:hover path {
     fill: var(--grey);
 }
 
-.show {
+.show, .hidden {
   display: none;
 }
 
@@ -210,6 +225,7 @@ h1:hover a {
 
 h2 {
   margin: 1.5em 0 0.5em 0;
+  font-style: italic;
 }
 
 figure {
@@ -220,6 +236,19 @@ img {
   width: 100%;
   border: 1px solid var(--grey);
   border-radius: 5px;
+}
+
+.callout {
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  color: var(--orange);
+  background: #fff;
+  border: 1px solid var(--orange);
+  text-align: center;
+  text-align-last: center;
+  line-height: 1.2;
 }
 
 .hidden {
@@ -283,17 +312,18 @@ a.button:hover {
   font-size: 1.2em;
 }
 
-form {
-  display: none;
-}
-
 .form-elements {
   padding: 0;
 }
 
-input, textarea {
+.nameChecks {
+  display: block;
+  margin-bottom: 0.7em;
+}
+
+input:not([type='checkbox']), textarea {
   padding: 0.5em 0.5em;
-  margin: 0.2em -0.5em;
+  margin: 0 -0.5em 1.2em -0.5em;
   border-radius: 5px;
   border: 1px solid var(--orange);
   color: var(--grey) !important;
@@ -324,11 +354,11 @@ button {
   cursor: pointer;
   background: var(--orange);
   color: #fff !important;
-  margin-top: 1em;
+  margin-top: 0.5em;
   transition: box-shadow 0.3s ease;
 }
 
-button:hover {
+button:hover, #enter:hover {
   box-shadow: 0 2px 2px rgba(0,0,0,0.03),
               0 4px 4px rgba(0,0,0,0.03),
               0 8px 8px rgba(0,0,0,0.03);
@@ -340,7 +370,7 @@ button:hover {
   .columns {
     width: auto;
     margin: 0;
-    padding: 0;
+    padding: 0 0 1em 0;
   }
 
   #right, #left {
@@ -361,9 +391,14 @@ button:hover {
   
   nav h1 {
     margin: 0.5em 0;
+    font-size: 25px;
   }
 
   #nav a {
     margin-right: 0.1em;
+  }
+
+  h1 {
+    font-size: 2em;
   }
 }
