@@ -1,0 +1,7 @@
+[ ] Correct RSVP form templating:
+    [ ] Remove blank spaces from response row so the right number of names are shown
+    [ ] Account for cases with plus one
+
+[ ] Add loading indicators:
+    [ ] Initial code form
+    [ ] Second RSVP form
