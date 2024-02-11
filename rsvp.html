@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
@@ -11,6 +13,8 @@
     <meta name="robots" content="noindex, nofollow" />
 
     <script async src="https://analytics.eu.umami.is/script.js" data-website-id="76b2d306-26c8-4692-bdee-8002cc399ef2"></script>
+    <script type="text/javascript">
+    </script>
   </head>
 
   <body>
@@ -23,28 +27,27 @@
         <a class="button" href="rsvp.html">RSVP</a>
         <a id="heart" href="index.html">🧡</a>
       </div>
-    </nav>
+    </nav>  
 
     <div class="columns">
       <div id="left"> 
         <h1>RSVP</h1>
-
-        <p>You will need to do this at some point...</p>
-        <p>No action needed at the moment, but keep your eyes peeled for an update.</p>
+        <p class="welcome"></p>
 
         <form
-          class="gform"
+          class="gform hidden"
           action="https://script.google.com/macros/s/AKfycby_p5SJChj98imM7T_kLZ44JLHgV9n_Z2dUDTnx8u9TU5GqBLm0X1YY7H9uKWM4RGn3/exec"
           method="POST"
         >
           <div class="form-elements">
-            <p>Please fill out and submit the form below!</p>
+            <input type="text" name="code" class="hidden">
 
             <label>
-              Name(s): 
+              Please let us know who will or will not be attending: 
             </label> <br>
-            <input type="text" name="name_1" size="40" placeholder="Your name (first and last names)"> <br>
-            <input type="text" name="name_2" size="40" placeholder="Partner or plus one, if relevant" class="mb-1"> <br>
+
+            <span class="nameChecks">
+            </span>
 
             <label>
               Best contact email:
@@ -59,23 +62,38 @@
             <label>
               Any dietary restrictions:
             </label> <br>
-            <textarea name="message" placeholder="Any dietary restrictions, or other notes..." cols="39" class="mb-1"></textarea> <br>
+            <textarea name="message" placeholder="Please note guest(s) for whom the restriction applies" cols="39" class="mb-1"></textarea> <br>
             <button type="submit" class="button">RSVP!</button>
           </div>
 
-          <p style="display:none" class="thankyou_message">
-            All done, thank you for the response—we're looking forward to celebrating with you!
-          </p>
-          
+        <p style="display:none" class="thankyou_message">
+          All done, thank you for the response—we're looking forward to celebrating with you!
+        </p>
+        
         </form>
-
       </div>
 
       <div id="right">
+        <form
+          class="invite_code"
+          action="https://script.google.com/macros/s/AKfycbyx3UnFql1mRzvOjFfTTi9oZ6TpOoybKy_rndRUyhHWUfBwKuFV68FkRn9YIbJM9smx/exec"
+          method="GET"
+        >
+          <div class="form-elements"> 
+            <label>
+              Please enter the RSVP code on your invitation to reveal the RSVP form:
+            </label> <br>
+            <input type="text" name="code" size="40" placeholder="ABCDEF" class="mb-1"> <br>
+            <button type="submit" class="button">Submit!</button>
+          </div>
+        </form>
+
+        
       </div>
     </div>
-
+    
     <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+    <script type="text/javascript" src="sheets.js"></script>
 
   </body>
 </html>

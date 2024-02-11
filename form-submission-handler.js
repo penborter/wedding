@@ -56,6 +56,8 @@
     var formData = getFormData(form);
     var data = formData.data;
 
+    console.log("Running");
+
     // If a honeypot field is filled, assume it was done so by a spam bot.
     if (formData.honeypot) {
       return false;
@@ -78,6 +80,8 @@
           if (thankYouMessage) {
             thankYouMessage.style.display = "block";
           }
+          
+          document.querySelector("p.welcome").style.display = "none";
         }
     };
     // url encode form data for sending as post data

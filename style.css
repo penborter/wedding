@@ -321,7 +321,7 @@ a.button:hover {
   margin-bottom: 0.7em;
 }
 
-input:not([type='checkbox']), textarea {
+input:not([type='radio']), textarea {
   padding: 0.5em 0.5em;
   margin: 0 -0.5em 1.2em -0.5em;
   border-radius: 5px;
@@ -332,6 +332,12 @@ input:not([type='checkbox']), textarea {
   font-size: 16px;
 
   max-width: 93vw;
+}
+
+.radio_label {
+  margin: 1.5em 0 1em 0;
+  display: inline-block;
+  line-height: 0;
 }
 
 label {
