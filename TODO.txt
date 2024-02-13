@@ -7,8 +7,8 @@
     [ ] Initial code form
     [ ] Second RSVP form
 
-[ ] RSVP page
+[/] RSVP page
     [ ] Mobile formatting (esp. margin right)
-    [ ] Update text - "Enter 6-letter code attached to your invitation"
+    [X] Update text - "Enter 6-letter code attached to your invitation"
 
 [ ] More clearly link between pages - RSVP -> Info -> FAQs -> Photos
