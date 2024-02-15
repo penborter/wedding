@@ -312,6 +312,22 @@ a.button:hover {
   font-size: 1.2em;
 }
 
+#rsvp_link, #rsvp_link a {
+  color: var(--orange);
+  font-style: normal;
+  line-height: 1.5;
+}
+
+#rsvp_link a {
+  text-underline-offset: 5px;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+}
+
+#rsvp_link a:hover {
+  text-underline-offset: 8px;
+}
+
 .form-elements {
   padding: 0;
 }
