@@ -17,7 +17,7 @@ function validateForm(form) {
 function getRequest(form) {
   var inviteCode = form.code.value;
   var url = form.action;
-  url = url + "?code=" + inviteCode;
+  url = url + "?code=" + inviteCode.toUpperCase();
   console.log('Running');
   console.log(inviteCode);
 
