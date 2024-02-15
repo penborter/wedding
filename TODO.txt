@@ -1,19 +1,28 @@
-[ ] Fix invite code validation
-    [ ] Alert if code is wrong format (regex)
-    [ ] Alert if code is not in list
-    [ ] Don't show form if no match - doGet should send back "Unsuccessful" message
-
-[ ] Correct RSVP form templating:
-    [ ] Remove blank spaces from response row so the right number of names are shown
-    [ ] Account for cases with plus one
-    [ ] Link to info page after submission
-
-[ ] Add loading indicators:
-    [ ] Initial code form
-    [ ] Second RSVP form
+DOING
 
 [/] RSVP page
-    [ ] Mobile formatting (esp. margin right)
-    [X] Update text - "Enter 6-letter code attached to your invitation"
+    [X] Mobile formatting (esp. margin right)
+    [X] Updated text - "Enter 6-letter code attached to your invitation"
+    [ ] Confirm text (including warnings) with Claudia
+
+
+DONE
+
+[X] Fix invite code validation
+    [X] Alert if code is wrong format (regex)
+    [X] Alert if code is not in list
+    [X] Don't show form if no match - doGet should send back "Unsuccessful" message
+
+[X] Correct RSVP form templating:
+    [X] Remove blank spaces from response row so the right number of names are shown
+    [X] Account for cases with plus one
+     -> We can just ask for the name of the plus one if needed, currently not supported
+    [X] Link to info page after submission
+
+[X] Added loading indicators:
+    [X] Initial code form
+    [X] Second RSVP form
+     -> Both buttons change to say "loading" once submitted
 
 [ ] More clearly link between pages - RSVP -> Info -> FAQs -> Photos
+    [X] Add link to Info page after RSVP form submit

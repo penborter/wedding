@@ -323,7 +323,7 @@ a.button:hover {
 
 input:not([type='radio']), textarea {
   padding: 0.5em 0.5em;
-  margin: 0 -0.5em 1.2em -0.5em;
+  margin: 0 0.7em 1.2em -0.5em;
   border-radius: 5px;
   border: 1px solid var(--orange);
   color: var(--grey) !important;
@@ -331,7 +331,8 @@ input:not([type='radio']), textarea {
   font-family: arial, sans-serif;
   font-size: 16px;
 
-  max-width: 93vw;
+  max-width: 300px;
+  width: 100%;
 }
 
 .radio_label {
@@ -389,6 +390,12 @@ button:hover, #enter:hover {
   nav {
     width: calc(100% - 2em);
     display: block;
+    position: sticky;
+    top: 0em;
+    padding: 0.5em 1em 1.5em 1em;
+    margin: 0 auto;
+    background: var(--pink);
+    z-index: 1;
   }
 
   nav h1, #nav {

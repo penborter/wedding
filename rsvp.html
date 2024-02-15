@@ -60,14 +60,15 @@
             <input type="text" name="song" size="40" class="mb-1" placeholder="e.g. Parachute, by Timomatic"> <br>
 
             <label>
-              Any dietary restrictions:
+              Any dietary restrictions: 
             </label> <br>
             <textarea name="message" placeholder="Please note guest(s) for whom the restriction applies" cols="39" class="mb-1"></textarea> <br>
-            <button type="submit" class="button">RSVP!</button>
+            <button type="submit" class="button" id="rsvp_submit">RSVP!</button>
           </div>
 
         <p style="display:none" class="thankyou_message">
           All done, thank you for the response—we're looking forward to celebrating with you!
+          Head over to our <a href="info.html">Info</a> page for more information.
         </p>
         
         </form>
@@ -76,7 +77,7 @@
       <div id="right">
         <form
           class="invite_code"
-          action="https://script.google.com/macros/s/AKfycbyx3UnFql1mRzvOjFfTTi9oZ6TpOoybKy_rndRUyhHWUfBwKuFV68FkRn9YIbJM9smx/exec"
+          action="https://script.google.com/macros/s/AKfycbx4Z_jxVzSnjaD2Knsn_lwcMG60zLcza3fHhxhzQMx0BHVoy0_RlG8fLxe8DxCzLreY/exec"
           method="GET"
         >
           <div class="form-elements"> 
@@ -84,7 +85,7 @@
               Please enter the 6-letter code (in orange, on the card attached your invitation) to reveal the RSVP form:
             </label> <br>
             <input type="text" name="code" size="40" placeholder="ABCDEF" class="mb-1"> <br>
-            <button type="submit" class="button">Submit!</button>
+            <button type="submit" class="button" id="code_submit">Submit!</button>
           </div>
         </form>
 

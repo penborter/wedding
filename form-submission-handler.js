@@ -57,6 +57,7 @@
     var data = formData.data;
 
     console.log("Running");
+    document.querySelector("#rsvp_submit").innerHTML = "Loading...";
 
     // If a honeypot field is filled, assume it was done so by a spam bot.
     if (formData.honeypot) {

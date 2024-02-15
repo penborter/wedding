@@ -1,18 +1,44 @@
 
-function getRequest(inviteCode) {
-  var url = 'https://script.google.com/macros/s/AKfycbyx3UnFql1mRzvOjFfTTi9oZ6TpOoybKy_rndRUyhHWUfBwKuFV68FkRn9YIbJM9smx/exec';
+// Initial check that the invite code is valid 
+function validateForm(form) {
+  var regex = new RegExp("^[a-zA-Z]+$");
+  var inviteCode = form.code.value;
+  // Code should be 6 letters
+  if (inviteCode.length != 6 || !(regex.test(inviteCode))) {
+    alert("Invalid code! Make sure to enter the six letters on the card attached to your invitation.");
+    return false;
+
+  } else {
+    getRequest(form);
+    document.querySelector("#code_submit").innerHTML = "Loading...";
+  }
+}
+
+function getRequest(form) {
+  var inviteCode = form.code.value;
+  var url = form.action;
   url = url + "?code=" + inviteCode;
   console.log('Running');
+  console.log(inviteCode);
 
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xhr.responseType = "json";
   xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {        
-        if (xhr.response["data"] === "no_form") {
+        console.log(xhr.response);
+        var response = xhr.response["data"];
+
+        // If the code has already been used to RSVP 
+        if (response === "no_form") {
+          console.log("No form");
           noForm();
+        } else if (response === "no_match") {
+          //console.log(response);
+          noMatch();
         } else {
-          generateForm(xhr.response, inviteCode);
+          generateForm(response, inviteCode);
         }
       }
     }
@@ -20,24 +46,23 @@ function getRequest(inviteCode) {
   xhr.send();
 }
 
-function validateForm(form) {
-  if (form.code.value.length != 6) {
-    alert("Invalid code - check your invitation again!");
-    return false;
-
-  } else {
-    //getRequest(form.code.value)
-  }
-}
-
+// For when the get request returns "no_form", i.e. they've already RSVP'd
 function noForm() {
-  document.querySelector("p.welcome").innerHTML = "We've already received your RSVP! If you need to change your response, please reach out to Ben or Claudia directly.";
+  document.querySelector("p.welcome").innerHTML = 
+    "We've already received your response! If you need to change your response, please reach out to Ben or Claudia directly.</p><p>Otherwise, take a look at the <a href='info.html'>Info</a> page to learn what you need to know for the day.";
   document.querySelector(".invite_code").style.display = "none";
 }
 
+// For when the get request returns "no_match", i.e. entered a code not in the RSVP list
+function noMatch() {
+  alert("Invalid code! Make sure to enter the six letters on the card attached to your invitation.");
+  document.querySelector("#code_submit").innerHTML = "Submit";
+}
+
+// To generate the RSVP form based on the Gsheets response
 function generateForm(response, inviteCode) {
 
-  var names = response["data"];
+  var names = response.filter(n => n);
   var numNames = names.length;
   var namesContent = "";
 
@@ -47,7 +72,7 @@ function generateForm(response, inviteCode) {
   // Add the correct amount of check boxes, with matching names
   var nameChecks = document.querySelector("span.nameChecks");
   nameChecks.innerHTML = names.map((name, index) =>
-  `<span class="radio_label"><i>${name}:</i></span><br>
+  `<span class="radio_label" style="text-transform: capitalize;"><i>${name}:</i></span><br>
   <input type="radio" id="name_${index}_true" name="name_${index}" value="True">
   <label for="name_${index}_true">Attending</label><br>
   <input type="radio" id="name_${index}_false" name="name_${index}" value="False">
@@ -71,8 +96,9 @@ function handleCodeSubmit(event) {
   event.preventDefault();
   var form = event.target;
   
-  // TODO - First need to validate code is legit
-  getRequest(form.code.value);
+  // Check code input is in correct format
+  validateForm(form);
+  //getRequest(form.code.value);
 }
 
 document.querySelector('.invite_code').addEventListener("submit", handleCodeSubmit, false);
