@@ -6,7 +6,14 @@
 [ ] Correct RSVP form templating:
     [ ] Remove blank spaces from response row so the right number of names are shown
     [ ] Account for cases with plus one
+    [ ] Link to info page after submission
 
 [ ] Add loading indicators:
     [ ] Initial code form
     [ ] Second RSVP form
+
+[/] RSVP page
+    [ ] Mobile formatting (esp. margin right)
+    [X] Update text - "Enter 6-letter code attached to your invitation"
+
+[ ] More clearly link between pages - RSVP -> Info -> FAQs -> Photos
