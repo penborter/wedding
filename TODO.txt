@@ -1,3 +1,8 @@
+[ ] Fix invite code validation
+    [ ] Alert if code is wrong format (regex)
+    [ ] Alert if code is not in list
+    [ ] Don't show form if no match - doGet should send back "Unsuccessful" message
+
 [ ] Correct RSVP form templating:
     [ ] Remove blank spaces from response row so the right number of names are shown
     [ ] Account for cases with plus one
