@@ -161,7 +161,7 @@ a:hover path {
   }
 
   .hide {
-    display: none;
+    display: none !important;
   }
 
   .nospace {
@@ -393,7 +393,7 @@ button:hover, #enter:hover {
 
   #right, #left {
     width: auto;
-    margin: 2em 1em;
+    margin: 1em 1em;
     display: block;
     padding: 0;
   }

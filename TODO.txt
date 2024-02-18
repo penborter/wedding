@@ -1,4 +1,4 @@
-DOING
+~~~ DOING ~~~
 
 [/] RSVP page
     [X] Mobile formatting (esp. margin right)
@@ -9,8 +9,24 @@ DOING
     [X] Change "plus one" to "guest" in names list spreadsheet
     [ ] Change "loading" for code submit to remove form (so it can be seen above a phone keyboard)
 
+[X] Notes from Claudia 19/02
+    [X] FAQ Page
+        [X] Change RSVP to March 22
+        [X] Last names - add "not officially"
+        [X] Driving - carpark but cars can't be left overnight
+        [X] Late - match invitation
+        [X] Add kids FAQ
+        [X] Update gifts FAQ
+    [X] Photos page
+        [X] Pictures - designated time and will add sharing link
+    [X] Info Page
+        [X] Transport section expand
+        [X] Dress code
+        [X] More timing detail
+        [X] Add specific venue address / map
 
-DONE
+
+~~~ DONE ~~~
 
 [X] Fix invite code validation
     [X] Alert if code is wrong format (regex)
