@@ -5,6 +5,10 @@ DOING
     [X] Updated text - "Enter 6-letter code attached to your invitation"
     [ ] Confirm text (including warnings) with Claudia
 
+[ ] Update 18/02
+    [X] Change "plus one" to "guest" in names list spreadsheet
+    [ ] Change "loading" for code submit to remove form (so it can be seen above a phone keyboard)
+
 
 DONE
 

@@ -163,8 +163,15 @@ a:hover path {
   .hide {
     display: none;
   }
+
+  .nospace {
+    display: block;
+  }
 }
 
+.nospace {
+  margin: 0 0 1em 0;
+}
 
 .columns {
   width: 75%;
@@ -234,8 +241,11 @@ figure {
 
 img {
   width: 100%;
-  border: 1px solid var(--grey);
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.05), 
+              0 4px 4px rgba(0,0,0,0.05), 
+              0 8px 8px rgba(0,0,0,0.05), 
+              0 16px 16px rgba(0,0,0,0.05);
 }
 
 .callout {
@@ -280,6 +290,7 @@ figcaption {
 }
 
 .button {
+  font-weight: 600;
   color: var(--orange);
   font-family: Arial;
   padding: 0.3em 0.5em;
@@ -302,7 +313,7 @@ div.button {
   padding: 1em;
 }
 
-a.button:hover {
+a.button:hover, #active {
   background: var(--orange);
   color: #fff;
 }
@@ -310,22 +321,6 @@ a.button:hover {
 #heart {
   margin-top: 0.25em;
   font-size: 1.2em;
-}
-
-#rsvp_link, #rsvp_link a {
-  color: var(--orange);
-  font-style: normal;
-  line-height: 1.5;
-}
-
-#rsvp_link a {
-  text-underline-offset: 5px;
-  text-decoration-style: wavy;
-  text-decoration-thickness: 2px;
-}
-
-#rsvp_link a:hover {
-  text-underline-offset: 8px;
 }
 
 .form-elements {
