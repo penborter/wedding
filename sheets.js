@@ -63,7 +63,6 @@ function noMatch() {
 function generateForm(response, inviteCode) {
 
   var names = response.filter(n => n);
-  var numNames = names.length;
   var namesContent = "";
 
   // Add the code to the "code" input
@@ -81,10 +80,10 @@ function generateForm(response, inviteCode) {
   ).join('');
 
   // Create text list of names, to show in "welcome" paragraph
-  if (numNames == 1) {
-  namesContent = document.createTextNode(names[0]);
+  if (names.length == 1) {
+    namesContent = names[0];
   } else {
-  namesContent = names.slice(0,-1).join(", ") + " <i>&</i> " + names.slice(-1);
+    namesContent = names.slice(0,-1).join(", ") + " <i>&</i> " + names.slice(-1);
   }
 
   document.querySelector("p.welcome").innerHTML = "Welcome " + namesContent + "!";
